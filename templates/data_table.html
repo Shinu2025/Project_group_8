@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>IMy Website</title>
+        <style>
+            body {
+                background-color: rgb(212, 210, 210);
+            }
+        </style>
+    </head>
+    <style>
+        table, th, td {
+          border: 1px solid black;
+        }
+        </style>
+    <body>
+        <h1>Global Terrorism Data</h1>
+    <body>
+        <table style="width:50%">
+            <thead>
+                <tr><th>iyear</th><th>country</th><th>country_txt</th><th>dbsource</th><th>int_log</th></tr>
+            </thead>
+            <tbody>
+                {% for s in data%}
+            <tr><td>{{ s[0] }}</td><td>{{ s[1] }}</td><td>{{ s[2] }}</td><td>{{ s[3] }}</td><td>{{ s[4] }}</td></tr>
+                {% endfor %}    
+            </tbody>
+        </table>
+    </body>
+</html>
+
